@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Generator & Scanner</title>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsqr/1.4.0/jsQR.min.js"></script>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>QR Generator + Scanner</h1>
+
+    <button onclick="showSection('generator')">QR Generator</button>
+    <button onclick="showSection('scanner')">QR Scanner</button>
+
+    <!-- ---------------- GENERATOR SECTION ---------------- -->
+    <div id="generator" class="section active">
+        <h2>QR Code Generator</h2>
+        <input type="text" id="textInput" placeholder="Enter text here">
+        <button onclick="generateQR()">Generate QR</button>
+        <div id="qrContainer"></div>
+    </div>
+
+    <!-- ---------------- SCANNER SECTION ---------------- -->
+    <div id="scanner" class="section">
+        <h2>QR Code Scanner</h2>
+        <video id="preview"></video>
+        <h3>Scanned Text:</h3>
+        <p id="result"></p>
+    </div>
+
+    <!-- Link JS -->
+    <script src="script.js"></script>
+</body>
+</html>
